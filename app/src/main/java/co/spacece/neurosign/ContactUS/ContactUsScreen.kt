@@ -15,8 +15,6 @@ import androidx.compose.ui.res.painterResource
 
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 
@@ -65,13 +63,12 @@ fun ContactUsScreen() {
             )
 
 
-            Divider(
-
-                color = Color(0xFFF8A800),
-                thickness = 3.5.dp,
+            HorizontalDivider(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                thickness = 3.5.dp,
+                color = Color(0xFFF8A800)
             )
 
             // Contact Cards
