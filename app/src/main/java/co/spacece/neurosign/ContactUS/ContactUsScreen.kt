@@ -15,8 +15,6 @@ import androidx.compose.ui.res.painterResource
 
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 
@@ -24,14 +22,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import co.spacece.neurosign.R
-//import co.spacece.neurosign.Utils.ConstantApp
-//import co.spacece.neurosign.ui.theme.contact_us_inner_card_border_color
+import co.spacece.neurosign.ContactUS.Utils.ConstantApp
+import co.spacece.neurosign.ui.theme.contactUsInnerCardBorderColor
 
 @Preview(showBackground = true)
 @Composable
 fun ContactUsScreen() {
-    // Wrapping entire UI inside a Card with rounded corners
-    /*
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -54,7 +50,6 @@ fun ContactUsScreen() {
                         style = SpanStyle(
                             color = Color.Black,
                             fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily(Font(R.font.inter_regular)),
                             letterSpacing = 1.5.sp
                         ),
                         start = 0,
@@ -68,13 +63,12 @@ fun ContactUsScreen() {
             )
 
 
-            Divider(
-
-                color = Color(0xFFF8A800),
-                thickness = 3.5.dp,
+            HorizontalDivider(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 8.dp)
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                thickness = 3.5.dp,
+                color = Color(0xFFF8A800)
             )
 
             // Contact Cards
@@ -94,7 +88,7 @@ fun ContactCard(iconRes: Int, text: String) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
-            .border(1.dp, contact_us_inner_card_border_color, RoundedCornerShape(12.dp)),
+            .border(1.dp, contactUsInnerCardBorderColor, RoundedCornerShape(12.dp)),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White)
@@ -117,12 +111,9 @@ fun ContactCard(iconRes: Int, text: String) {
                 text = text,
                 fontSize = 14.sp,
                 color = Color.Black,
-                fontFamily = FontFamily(Font(R.font.inter_regular)),
                 textAlign = TextAlign.Center
             )
         }
     }
-
-     */
 }
 
