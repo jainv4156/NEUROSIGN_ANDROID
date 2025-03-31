@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import co.spacece.neurosign.R
 import co.spacece.neurosign.ContactUS.Utils.ConstantApp
-import co.spacece.neurosign.ui.theme.contactUsInnerCardBorderColor
+import co.spacece.neurosign.ui.theme.ContactUsInnerCardBorderColor
 
 @Preview(showBackground = true)
 @Composable
@@ -88,7 +88,7 @@ fun ContactCard(iconRes: Int, text: String) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp)
-            .border(1.dp, contactUsInnerCardBorderColor, RoundedCornerShape(12.dp)),
+            .border(1.dp, ContactUsInnerCardBorderColor, RoundedCornerShape(12.dp)),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White)
